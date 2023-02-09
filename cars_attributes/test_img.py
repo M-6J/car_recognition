@@ -8,7 +8,7 @@ from torch.nn import DataParallel
 from tqdm import tqdm
 from PIL import Image,ImageDraw,ImageFont
 import numpy as np
-from MobileNetV2 import mobilenet_v2
+from cars_attributes.MobileNetV2 import mobilenet_v2
 
 
 

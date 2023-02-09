@@ -11,7 +11,7 @@ import numpy as np
 
 import sys
 sys.path.insert(1, "car_attributes")
-sys.path.insert(1, "yolov5.2")
+sys.path.insert(1, "yolov5")
 from cars_attributes.test_img import Car_recog
 from yolov5.demo import Yolov5Detect, draw_box_string
 
@@ -219,7 +219,7 @@ type_name = ['SUV', 'Sedan', 'Hatchback', 'Convertible', 'Coupe' 'Wagon', 'Truck
 
 if __name__ == "__main__":
     car_recog = Car_recog("car_attributes/checkpoint/mobilenet-v2_30.pth")
-    detector = Yolov5Detect("yolov5/weights/yolov5m.pt")
+    detector = Yolov5Detect("yolov5/weights/yolov5s.pt")
     print("load model successfuly")
 
     img_path = "./dataset/test_imgs/1.jpg"  # 测试图片路径
