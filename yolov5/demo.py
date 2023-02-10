@@ -4,7 +4,7 @@ import torch
 import torch.backends.cudnn as cudnn
 
 from models.experimental import attempt_load
-from utils.general import letterbox, non_max_suppression, scale_coords
+from utils.general import letterbox, non_max_suppression, scale_boxes
 
 
 class Yolov5Detect(object):
