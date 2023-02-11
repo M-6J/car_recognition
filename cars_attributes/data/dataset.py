@@ -7,16 +7,19 @@ import torchvision
 import cv2
 import sys
 import random
+import json
 from PIL import Image
 sys.path.insert(0, "data/")
-from data_augment import gussian_blur, gamma_trans, random_distort_image, random_wave, random_crop
+#from data_augment import gussian_blur, gamma_trans, random_distort_image, random_wave, random_crop
 
 class Dataset(data.Dataset):
     def __init__(self, img_list, phase='train'):
+        with open(img_list, encoding='utf-8') as f:
+            imgs = list(json.load(f).values())# {} to []
         self.phase = phase
-        with open(img_list, 'r') as fd:
-            imgs = fd.readlines()
-        imgs = [img.rstrip("\n") for img in imgs]#rstrip() 메서드는 인수로 지정된 후행 문자를 제거하여 문자열 복사본을 반환합니다.
+        #with open(img_list, 'r') as fd:
+        #    imgs = fd.readlines()
+        #imgs = [img.rstrip("\n") for img in imgs]#rstrip() 메서드는 인수로 지정된 후행 문자를 제거하여 문자열 복사본을 반환합니다.
         random.shuffle(imgs)
         self.imgs = imgs
         normalize = T.Normalize(mean=[0.5, 0.5, 0.5],
@@ -36,16 +39,16 @@ class Dataset(data.Dataset):
 
     def __getitem__(self, index): #txt 안에는 image경로, 색상, 앞뒤, 차형 이 있는듯 
         sample = self.imgs[index]
-        splits = sample.split()
+        splits = sample.split(",")
         img_path = splits[0]
 
         # data augment
         data = cv2.imread(img_path)
-        data = random_crop(data, 0.2)
+        #data = random_crop(data, 0.2)
         #data = random_wave(data, 0.2)
         #data = random_distort_image(data, 0.2)
-        data = gussian_blur(data, 0.2)
-        data = gamma_trans(data, 0.2)
+        #data = gussian_blur(data, 0.2)
+        #data = gamma_trans(data, 0.2)
         
         if random.random() < 0.2:
             data = cv2.flip(data, 1)
@@ -56,16 +59,17 @@ class Dataset(data.Dataset):
         data = data.resize((256, 256))
         data = self.transforms(data)
         label_color = np.int32(splits[1])
-        label_ori = np.int32(splits[2])
+        label_car = np.int32(splits[2])
         label_type = np.int32(splits[3])
-        return data.float(), label_color, label_ori, label_type
+        return data.float(), label_color, label_car, label_type
 
     def __len__(self):
         return len(self.imgs)
 
 
 if __name__ == '__main__':
-    train_data = Dataset("/home/guopei/workspace/dataset/traffic/crop_car_imgs/car_imgs/kakou/train.txt", "train")
+    
+    train_data = Dataset("./dataset/cars_annos/train_num.json", "train")
     trainloader = data.DataLoader(train_data, batch_size=64, shuffle=True, num_workers=4)
     for i, (data, label, label2, label3) in enumerate(trainloader):
         img = torchvision.utils.make_grid(data).numpy()

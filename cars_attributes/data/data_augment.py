@@ -97,7 +97,7 @@ def show_image(img, name="no name"):
 
 if __name__ == "__main__":
     for i in range(100):
-        img = cv2.imread("/home/gp/work/data/images/alg_group/0/depth_20.png", -1)
+        img = cv2.imread("./dataset/test_img/1.jpg", -1)
         #show_image(img)
         #cv2.waitKey(0)
         img = random_crop(img, 1)

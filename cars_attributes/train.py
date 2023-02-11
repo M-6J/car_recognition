@@ -150,9 +150,9 @@ if __name__ == "__main__":
     # data.Dataset() 보니 txt에 경로, 색상, 유형, 차종 이 문자열이 아니라 숫자로 표현되어 있다. 
     # 이유는 숫자가 연산량이 더 적어서 인것같다
     annos_file_path = './dataset/cars_annos/'
-    with open(annos_file_path + 'cars_trian_path.json', 'r') as outfile:        
+    with open(annos_file_path + 'cars_train_annos.json', 'r') as outfile:        
         train_data = json.load(outfile)
-    with open(annos_file_path + 'cars_test_path.json', 'r') as outfile:       
+    with open(annos_file_path + 'cars_test_annos.json', 'r') as outfile:       
         val_data = json.load(outfile)
     train_list = {}
     val_list = {}
