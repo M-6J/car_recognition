@@ -18,7 +18,7 @@ import json
 from tqdm import tqdm
 
 from data.dataset import Dataset
-from tensorboard_gp import TensorBoard
+#from tensorboard_gp import TensorBoard
 from MobileNetV2 import mobilenet_v2
 from WarmUpLR import WarmUpLR
 
@@ -177,7 +177,7 @@ if __name__ == "__main__":
     warmup_scheduler = WarmUpLR(optimizer, iter_per_epoch * warmup_epoch)
 
 
-    tensor_board = TensorBoard(64, 3, 256, 256)
+    #tensor_board = TensorBoard(64, 3, 256, 256)
     #tensor_board.visual_model(net)
     for epoch in range(1, max_epoch+1):
         if epoch >= warmup_epoch:
