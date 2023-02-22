@@ -25,8 +25,8 @@ from WarmUpLR import WarmUpLR
 device = 'cuda'
 best_acc = 0
 max_epoch = 30
-#train_list = "/home/guopei/workspace/dataset/traffic/crop_car_imgs/car_imgs/kakou/train.txt"
-#val_list = "/home/guopei/workspace/dataset/traffic/crop_car_imgs/car_imgs/kakou/val.txt"
+train_list = "/content/car_recognition/cars_annos/train_num.json"
+val_list = "/content/car_recognition/cars_annos/test_num.json"
 
 
 
@@ -149,11 +149,11 @@ if __name__ == "__main__":
     
     # data.Dataset() 보니 txt에 경로, 색상, 유형, 차종 이 문자열이 아니라 숫자로 표현되어 있다. 
     # 이유는 숫자가 연산량이 더 적어서 인것같다
-    annos_file_path = '/car_recognition/cars_annos/'
-    with open(annos_file_path + 'train_num.json', 'r') as outfile:        
-        train_list = list(json.load(outfile).values())
-    with open(annos_file_path + 'test_num.json', 'r') as outfile:       
-        val_list = list(json.load(outfile).values())
+    #annos_file_path = '/content/car_recognition/cars_annos/'
+    # with open(annos_file_path + 'train_num.json', 'r') as outfile:        
+    #     train_list = list(json.load(outfile).values())
+    # with open(annos_file_path + 'test_num.json', 'r') as outfile:       
+    #     val_list = list(json.load(outfile).values())
 
     
     train_dataset = Dataset(train_list, phase='train')

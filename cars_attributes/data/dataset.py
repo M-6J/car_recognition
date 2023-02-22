@@ -14,13 +14,13 @@ sys.path.insert(0, "data/")
 
 class Dataset(data.Dataset):
     def __init__(self, img_list, phase='train'):
-        with open(img_list, encoding='utf-8') as f:
+        with open(img_list, 'r') as f:
             imgs = list(json.load(f).values())# {} to []
         self.phase = phase
         #with open(img_list, 'r') as fd:
         #    imgs = fd.readlines()
         #imgs = [img.rstrip("\n") for img in imgs]#rstrip() 메서드는 인수로 지정된 후행 문자를 제거하여 문자열 복사본을 반환합니다.
-        random.shuffle(imgs)
+        #random.shuffle(imgs)
         self.imgs = imgs
         normalize = T.Normalize(mean=[0.5, 0.5, 0.5],
                                  std=[0.5, 0.5, 0.5])
@@ -69,7 +69,7 @@ class Dataset(data.Dataset):
 
 if __name__ == '__main__':
     
-    train_data = Dataset("./dataset/cars_annos/train_num.json", "train")
+    train_data = Dataset("/content/car_recognition/cars_annos/train_num.json", "train")
     trainloader = data.DataLoader(train_data, batch_size=64, shuffle=True, num_workers=4)
     for i, (data, label, label2, label3) in enumerate(trainloader):
         img = torchvision.utils.make_grid(data).numpy()
