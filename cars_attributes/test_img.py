@@ -13,7 +13,7 @@ from cars_attributes.MobileNetV2 import mobilenet_v2
 
 
 class Car_recog(object):
-    def __init__(self, model_path="./checkpoint/mobilenet-v2_30.pth"):
+    def __init__(self, model_path="/content/car_recognition/cars_attributes/checkpoint/mobilenet-v2_30.pth"):
         self.device = torch.device("cuda")
         self.net = mobilenet_v2().to(self.device)
         self.net = DataParallel(self.net)
