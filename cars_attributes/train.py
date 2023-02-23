@@ -18,7 +18,7 @@ import json
 from tqdm import tqdm
 
 from data.dataset import Dataset
-#from tensorboard_gp import TensorBoard
+from tensorboard_gp import TensorBoard
 from MobileNetV2 import mobilenet_v2
 from WarmUpLR import WarmUpLR
 
@@ -147,14 +147,6 @@ if __name__ == "__main__":
         net = torch.nn.DataParallel(net)
         cudnn.benchmark = True
     
-    # data.Dataset() 보니 txt에 경로, 색상, 유형, 차종 이 문자열이 아니라 숫자로 표현되어 있다. 
-    # 이유는 숫자가 연산량이 더 적어서 인것같다
-    #annos_file_path = '/content/car_recognition/cars_annos/'
-    # with open(annos_file_path + 'train_num.json', 'r') as outfile:        
-    #     train_list = list(json.load(outfile).values())
-    # with open(annos_file_path + 'test_num.json', 'r') as outfile:       
-    #     val_list = list(json.load(outfile).values())
-
     
     train_dataset = Dataset(train_list, phase='train')
     val_dataset = Dataset(val_list, phase='val')
