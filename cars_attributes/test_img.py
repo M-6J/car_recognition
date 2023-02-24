@@ -8,7 +8,7 @@ from torch.nn import DataParallel
 from tqdm import tqdm
 from PIL import Image,ImageDraw,ImageFont
 import numpy as np
-from cars_attributes.MobileNetV2 import mobilenet_v2
+from MobileNetV2 import mobilenet_v2
 
 
 
@@ -260,11 +260,12 @@ if __name__ == "__main__":
     for img_path in img_list:
         img = cv2.imread(img_path)
         img_RGB, label_color, label_car, label_type = car_recog.recog(img)
-        result = "颜色:%s, 朝向:%s, 类型:%s" % (color_name[label_color], car_name[label_car], type_name[label_type])
+        result = "Color:%s, Car:%s, Type:%s" % (color_name[label_color], car_name[label_car], type_name[label_type])
         print("车辆属性识别结果:%s" % result)
         # 把车属性的识别结果画到图上
         draw = ImageDraw.Draw(img_RGB)
-        font = ImageFont.truetype("./simhei.ttf", 24, encoding="utf-8")
+        #font = ImageFont.truetype("./simhei.ttf", 24, encoding="utf-8")
+        font = ImageFont.load_default()
         draw.text((0, 0), result, (255, 0, 0), font=font)
         img_BGR = cv2.cvtColor(np.array(img_RGB), cv2.COLOR_RGB2BGR)
         cv2.imwrite(os.path.join("result_test", os.path.basename(img_path)), img_BGR)

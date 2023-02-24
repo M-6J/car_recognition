@@ -17,10 +17,8 @@ class Dataset(data.Dataset):
         with open(img_list, 'r') as f:
             imgs = list(json.load(f).values())# {} to []
         self.phase = phase
-        #with open(img_list, 'r') as fd:
-        #    imgs = fd.readlines()
         imgs = [img.rstrip("\n") for img in imgs]#rstrip() 메서드는 인수로 지정된 후행 문자를 제거하여 문자열 복사본을 반환합니다.
-        #random.shuffle(imgs)
+        random.shuffle(imgs)
         self.imgs = imgs
         normalize = T.Normalize(mean=[0.5, 0.5, 0.5],
                                  std=[0.5, 0.5, 0.5])
@@ -50,8 +48,8 @@ class Dataset(data.Dataset):
         data = data.resize((256, 256))
         data = self.transforms(data)
         label_color = np.int32(splits[1])
-        label_car = np.int32(splits[2])
-        label_type = np.int32(splits[3])
+        label_type = np.int32(splits[2])
+        label_car = np.int32(splits[3])
         return data.float(), label_color, label_car, label_type
 
     def __len__(self):

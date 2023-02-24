@@ -50,7 +50,7 @@ def train(epoch, net, trainloader, optimizer, criterion, warmup_scheduler):
             warmup_scheduler.step()
             warm_lr = warmup_scheduler.get_lr()
             print("warm_lr:%s" % warm_lr)
-        inputs, targets_color, targets_car, targets_type = inputs.to(device), targets_color.to(device), targets_car.to(device), targets_type.to(device)
+        #inputs, targets_color, targets_car, targets_type = inputs.to(device), targets_color.to(device), targets_car.to(device), targets_type.to(device)
         optimizer.zero_grad()
         outputs_color, outputs_car, outputs_type = net(inputs)
         loss_color = criterion(outputs_color, targets_color.long())
@@ -72,8 +72,8 @@ def train(epoch, net, trainloader, optimizer, criterion, warmup_scheduler):
         if iters % 10 == 0:
             acc = predicted_color.eq(targets_color.long()).sum().item()*1.0/targets_color.shape[0]
             los = loss*1.0/targets_color.shape[0]
-            tensor_board.visual_loss("train_loss", los, iters)
-            tensor_board.visual_acc("train_acc", acc, iters)
+            #tensor_board.visual_loss("train_loss", los, iters)
+            #tensor_board.visual_acc("train_acc", acc, iters)
         batch_id += 1
         
 
@@ -89,7 +89,7 @@ def test(epoch, net, valloader, criterion):
     total_type = 0
     with torch.no_grad():
         for batch_idx, (inputs, targets_color, targets_car, targets_type) in enumerate(valloader):
-            inputs, targets_color, targets_car, targets_type = inputs.to(device), targets_color.to(device), targets_car.to(device), targets_type.to(device)
+            #inputs, targets_color, targets_car, targets_type = inputs.to(device), targets_color.to(device), targets_car.to(device), targets_type.to(device)
             outputs_color, outputs_car, outputs_type = net(inputs)
             loss_color = criterion(outputs_color, targets_color.long())
             loss_car = criterion(outputs_car, targets_car.long())
@@ -115,7 +115,7 @@ def test(epoch, net, valloader, criterion):
     acc_color = 1.*correct_color/total_color
     acc_car = 1.*correct_car/total_car
     acc_type = 1.*correct_type/total_type
-    tensor_board.visual_acc("test_acc", acc_color, epoch)
+    #tensor_board.visual_acc("test_acc", acc_color, epoch)
 
     print("Acc_color in the val_dataset:%s" % acc_color)
     print("Acc_car in the val_dataset:%s" % acc_car)
@@ -142,7 +142,7 @@ def test(epoch, net, valloader, criterion):
 if __name__ == "__main__":
     # set net
     net = mobilenet_v2(pretrained=True)#훈련 네트워크 설정
-    net = net.to(device)
+    #net = net.to(device)
     if device == "cuda":
         net = torch.nn.DataParallel(net)
         cudnn.benchmark = True
