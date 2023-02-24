@@ -215,7 +215,7 @@ car_name = [
 "Volvo XC90 SUV 2007",
 "smart fortwo Convertible 2012",
 ]
-type_name = ['SUV', 'Sedan', 'Hatchback', 'Convertible', 'Coupe' 'Wagon', 'Truck', 'Van', 'Minivan']
+type_name = ['SUV', 'Sedan', 'Hatchback', 'Convertible', 'Coupe', 'Wagon', 'Truck', 'Van', 'Minivan']
 
 if __name__ == "__main__":
     car_recog = Car_recog("/content/car_recognition/cars_attributes/checkpoint/mobilenet-v2_30.pth")

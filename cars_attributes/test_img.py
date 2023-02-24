@@ -253,7 +253,7 @@ if __name__ == "__main__":
     "Volvo XC90 SUV 2007",
     "smart fortwo Convertible 2012",
     ]
-    type_name = ['SUV', 'Sedan', 'Hatchback', 'Convertible', 'Coupe' 'Wagon', 'Truck', 'Van', 'Minivan']
+    type_name = ['SUV', 'Sedan', 'Hatchback', 'Convertible', 'Coupe', 'Wagon', 'Truck', 'Van', 'Minivan']
 
     car_recog = Car_recog()
     img_list = [os.path.join("test_imgs", i) for i in os.listdir("test_imgs")]
