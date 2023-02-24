@@ -50,7 +50,7 @@ def train(epoch, net, trainloader, optimizer, criterion, warmup_scheduler):
             warmup_scheduler.step()
             warm_lr = warmup_scheduler.get_lr()
             print("warm_lr:%s" % warm_lr)
-        #inputs, targets_color, targets_car, targets_type = inputs.to(device), targets_color.to(device), targets_car.to(device), targets_type.to(device)
+        inputs, targets_color, targets_car, targets_type = inputs.to(device), targets_color.to(device), targets_car.to(device), targets_type.to(device)
         optimizer.zero_grad()
         outputs_color, outputs_car, outputs_type = net(inputs)
         loss_color = criterion(outputs_color, targets_color.long())
@@ -89,7 +89,7 @@ def test(epoch, net, valloader, criterion):
     total_type = 0
     with torch.no_grad():
         for batch_idx, (inputs, targets_color, targets_car, targets_type) in enumerate(valloader):
-            #inputs, targets_color, targets_car, targets_type = inputs.to(device), targets_color.to(device), targets_car.to(device), targets_type.to(device)
+            inputs, targets_color, targets_car, targets_type = inputs.to(device), targets_color.to(device), targets_car.to(device), targets_type.to(device)
             outputs_color, outputs_car, outputs_type = net(inputs)
             loss_color = criterion(outputs_color, targets_color.long())
             loss_car = criterion(outputs_car, targets_car.long())
@@ -142,7 +142,7 @@ def test(epoch, net, valloader, criterion):
 if __name__ == "__main__":
     # set net
     net = mobilenet_v2(pretrained=True)#훈련 네트워크 설정
-    #net = net.to(device)
+    net = net.to(device)
     if device == "cuda":
         net = torch.nn.DataParallel(net)
         cudnn.benchmark = True
