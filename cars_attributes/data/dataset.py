@@ -14,8 +14,10 @@ sys.path.insert(0, "data/")
 
 class Dataset(data.Dataset):
     def __init__(self, img_list, phase='train'):
-        with open(img_list, 'r') as f:
-            imgs = list(json.load(f).values())# {} to []
+        # with open(img_list, 'r') as f:
+        #     imgs = list(json.load(f).values())# {} to []
+        with open(img_list, 'r') as fd:
+            imgs = fd.readlines()
         self.phase = phase
         imgs = [img.rstrip("\n") for img in imgs]#rstrip() 메서드는 인수로 지정된 후행 문자를 제거하여 문자열 복사본을 반환합니다.
         random.shuffle(imgs)

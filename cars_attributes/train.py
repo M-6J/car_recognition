@@ -25,8 +25,8 @@ from WarmUpLR import WarmUpLR
 device = 'cuda'
 best_acc = 0
 max_epoch = 30
-train_list = "/content/car_recognition/cars_annos/train_num.json"
-val_list = "/content/car_recognition/cars_annos/test_num.json"
+train_list = "/content/car_recognition/cars_annos/train_46.txt"
+val_list = "/content/car_recognition/cars_annos/test_46.txt"
 
 
 
