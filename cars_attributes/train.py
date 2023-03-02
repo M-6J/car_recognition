@@ -18,6 +18,7 @@ import json
 from tqdm import tqdm
 
 from data.dataset import Dataset
+from data.dataload import download_dataset
 from tensorboard_gp import TensorBoard
 from MobileNetV2 import mobilenet_v2
 from WarmUpLR import WarmUpLR
@@ -146,7 +147,10 @@ if __name__ == "__main__":
     if device == "cuda":
         net = torch.nn.DataParallel(net)
         cudnn.benchmark = True
-    
+    dataset_name = "cars196"
+    save_path = "./car_recognition/dataset"
+
+    download_dataset(dataset_name, save_path)
     
     train_dataset = Dataset(train_list, phase='train')
     val_dataset = Dataset(val_list, phase='val')
