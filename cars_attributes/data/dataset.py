@@ -48,7 +48,6 @@ class Dataset(data.Dataset):
         label_color = np.int32(sample['color'])
         label_type = np.int32(sample['type'])
         label_car = np.int32(sample['car'])
-        print(label_color, label_car, label_type)
         return data.float(), label_color, label_car, label_type
 
     def __len__(self):

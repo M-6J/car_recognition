@@ -51594,7 +51594,7 @@
     "car": "Ford GT Coupe 2006",
     "type": "Coupe",
     "image_path": "06321.jpg",
-    "color": "",
+    "color": 8,
     "bbox_x1": 174,
     "bbox_y1": 441,
     "bbox_x2": 736,
