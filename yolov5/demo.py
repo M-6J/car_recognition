@@ -3,15 +3,15 @@ import numpy as np
 import torch
 import torch.backends.cudnn as cudnn
 
-from models.experimental import attempt_load
-from utils.general import letterbox, non_max_suppression, scale_boxes
+from yolov5.models.experimental import attempt_load
+from yolov5.utils.general import letterbox, non_max_suppression, scale_boxes
 
 
 class Yolov5Detect(object):
     def __init__(self, weights='./weights/yolov5s.pt', device=0, img_size=(352,352), conf=0.5, iou=0.5):
         with torch.no_grad():
             self.device = "cuda:%s" % device
-            self.model = attempt_load(weights, map_location=self.device) # load FP32 model
+            self.model = attempt_load(weights, device=self.device) # load FP32 model
             self.model.half() # to FP16
             self.imgsz = img_size  # img_size最好是32的整数倍
             self.conf = conf
@@ -48,7 +48,7 @@ class Yolov5Detect(object):
         pred = non_max_suppression(pred, self.conf, self.iou, classes=None, agnostic=False)
         pred, im0 = pred[0], img0
         if pred is not None and len(pred):
-            pred[:, :4] = scale_coords(img.shape[2:], pred[:, :4], im0.shape).round()
+            pred[:, :4] = scale_boxes(img.shape[2:], pred[:, :4], im0.shape).round()
             pred = pred.cpu().detach().numpy().tolist() # from tensor to list
         return pred, img0
 
@@ -61,6 +61,7 @@ def draw_box_string(img, box, string):
     img = Image.fromarray(img)
     draw = ImageDraw.Draw(img)
     #font = ImageFont.truetype("simhei.ttf", 24, encoding="utf-8")
+    font = ImageFont.load_default()
     draw.text((x+w, y), string, (0, 255, 0), font=font)
     img = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
     return img

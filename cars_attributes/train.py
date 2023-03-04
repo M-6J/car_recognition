@@ -26,8 +26,8 @@ from WarmUpLR import WarmUpLR
 device = 'cuda'
 best_acc = 0
 max_epoch = 30
-train_list = "/content/car_recognition/cars_annos/new_train.txt"
-val_list = "/content/car_recognition/cars_annos/new_test.txt"
+train_list = "./car_recognition/cars_annos/new_train.json"
+val_list = "./car_recognition/cars_annos/new_test.json"
 
 
 
@@ -47,7 +47,7 @@ def train(epoch, net, trainloader, optimizer, criterion, warmup_scheduler):
     total_color = 0
     batch_id = 0
     for (inputs, targets_color, targets_car, targets_type) in tqdm(trainloader):
-        if epoch < 5:
+        if epoch < 2:
             warmup_scheduler.step()
             warm_lr = warmup_scheduler.get_lr()
             print("warm_lr:%s" % warm_lr)
@@ -147,7 +147,7 @@ if __name__ == "__main__":
     if device == "cuda":
         net = torch.nn.DataParallel(net)
         cudnn.benchmark = True
-    dataset_name = "cars196"
+    dataset_name = "custom-stanford-cars-dataset"
     save_path = "./car_recognition/dataset"
 
     download_dataset(dataset_name, save_path)
@@ -166,7 +166,7 @@ if __name__ == "__main__":
     criterion = nn.CrossEntropyLoss(ignore_index=-1)
     optimizer = optim.SGD(net.parameters(), lr=0.1, momentum=0.9, weight_decay=5e-4)
 
-    warmup_epoch = 5
+    warmup_epoch = 2
     scheduler = CosineAnnealingLR(optimizer, 30 - warmup_epoch)
 
     iter_per_epoch = len(train_dataset)

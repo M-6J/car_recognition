@@ -82,7 +82,7 @@ if __name__ == "__main__":
         x1, y1, w, h = box
         img_car = img0[y1:y1+h, x1:x1+w]
         img_RGB, label_color, label_car, label_type = car_recog.recog(img_car)
-        result = "Color:%s\nType:%s\nModel:%s" % (color_name[label_color], car_name[label_car], type_name[label_type])
+        result = "Model:%s\nType:%s\nColor:%s" % (car_name[label_car], type_name[label_type], color_name[label_color])
         print("Result:%s" % result)
 
         img0 = draw_box_string(img0, box, result)

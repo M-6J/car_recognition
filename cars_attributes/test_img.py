@@ -13,7 +13,7 @@ from MobileNetV2 import mobilenet_v2
 
 
 class Car_recog(object):
-    def __init__(self, model_path="/content/car_recognition/cars_attributes/checkpoint/mobilenet-v2_30.pth"):
+    def __init__(self, model_path="/content/checkpoint/mobilenet-v2_20.pth"):
         self.device = torch.device("cuda")
         self.net = mobilenet_v2().to(self.device)
         self.net = DataParallel(self.net)
@@ -107,10 +107,11 @@ if __name__ == "__main__":
     type_name = ['SUV', 'Sedan', 'Hatchback', 'Convertible', 'Coupe', 'Wagon', 'Truck', 'Van', 'Minivan']
 
     car_recog = Car_recog()
-    img_list = [os.path.join("test_imgs", i) for i in os.listdir("test_imgs")]
+    img_list = [os.path.join("./car_recognition/cars_attributes/test_imgs", i) for i in os.listdir("./car_recognition/cars_attributes/test_imgs")]
     for img_path in img_list:
         img = cv2.imread(img_path)
         img_RGB, label_color, label_car, label_type = car_recog.recog(img)
+        print(img_path)
         result = "Color:%s, Car:%s, Type:%s" % (color_name[label_color], car_name[label_car], type_name[label_type])
         print("车辆属性识别结果:%s" % result)
         # 把车属性的识别结果画到图上
@@ -119,5 +120,5 @@ if __name__ == "__main__":
         font = ImageFont.load_default()
         draw.text((0, 0), result, (255, 0, 0), font=font)
         img_BGR = cv2.cvtColor(np.array(img_RGB), cv2.COLOR_RGB2BGR)
-        cv2.imwrite(os.path.join("result_test", os.path.basename(img_path)), img_BGR)
+        cv2.imwrite(os.path.join("/content/car_recognition/cars_attributes/result_test", os.path.basename(img_path)), img_BGR)
 

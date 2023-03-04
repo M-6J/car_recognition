@@ -10,13 +10,13 @@ import random
 import json
 from PIL import Image
 sys.path.insert(0, "data/")
-#from data_augment import gussian_blur, gamma_trans, random_distort_image, random_wave, random_crop
+from data.data_augment import gussian_blur, gamma_trans, random_crop
 
 class Dataset(data.Dataset):
     def __init__(self, img_list, phase='train'):
+        self.phase = phase
         with open(img_list, 'r') as fd:
             imgs = json.load(fd)
-        self.phase = phase
         random.shuffle(imgs)
         self.imgs = imgs
         normalize = T.Normalize(mean=[0.5, 0.5, 0.5],
@@ -36,10 +36,22 @@ class Dataset(data.Dataset):
 
     def __getitem__(self, index): #image경로, 색상, 차종, 차형
         sample = self.imgs[index]
-        img_path = '/content/car_recognition/dataset/cars_test/images/' + sample['image_path']
+        if self.phase == 'train':
+            img_path = './car_recognition/dataset/cars_train/images/' + sample['image_path']
+        else:
+            img_path = './car_recognition/dataset/cars_test/images/' + sample['image_path']
 
         # data augment
         data = cv2.imread(img_path)
+        data = random_crop(data, 0.2)
+        #data = random_wave(data, 0.2)
+        #data = random_distort_image(data, 0.2)
+        data = gussian_blur(data, 0.2)
+        data = gamma_trans(data, 0.2)
+        
+        if random.random() < 0.2:
+            data = cv2.flip(data, 1)
+
         data = cv2.cvtColor(data, cv2.COLOR_BGR2RGB)
         data = Image.fromarray(data)
         
@@ -56,7 +68,7 @@ class Dataset(data.Dataset):
 
 if __name__ == '__main__':
     
-    train_data = Dataset("/content/new_test.json", "train")
+    train_data = Dataset("./test.json", "train")
     trainloader = data.DataLoader(train_data, batch_size=64, shuffle=True, num_workers=4)
     for i, (data, label, label2, label3) in enumerate(trainloader):
         img = torchvision.utils.make_grid(data).numpy()
