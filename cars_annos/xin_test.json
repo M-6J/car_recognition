@@ -1399,7 +1399,7 @@
   {
     "n": 127,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "00128.jpg",
     "color": 5,
     "bbox_x1": 55,
@@ -1597,7 +1597,7 @@
   {
     "n": 145,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "00146.jpg",
     "color": 2,
     "bbox_x1": 25,
@@ -3027,7 +3027,7 @@
   {
     "n": 275,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "00276.jpg",
     "color": 2,
     "bbox_x1": 102,
@@ -4127,7 +4127,7 @@
   {
     "n": 375,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "00376.jpg",
     "color": 4,
     "bbox_x1": 10,
@@ -4666,7 +4666,7 @@
   {
     "n": 424,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "00425.jpg",
     "color": 8,
     "bbox_x1": 83,
@@ -6349,7 +6349,7 @@
   {
     "n": 577,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "00578.jpg",
     "color": 6,
     "bbox_x1": 124,
@@ -8527,7 +8527,7 @@
   {
     "n": 775,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "00776.jpg",
     "color": 5,
     "bbox_x1": 50,
@@ -9473,7 +9473,7 @@
   {
     "n": 861,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "00862.jpg",
     "color": 5,
     "bbox_x1": 35,
@@ -11464,7 +11464,7 @@
   {
     "n": 1042,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "01043.jpg",
     "color": 5,
     "bbox_x1": 336,
@@ -13477,7 +13477,7 @@
   {
     "n": 1225,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "01226.jpg",
     "color": 6,
     "bbox_x1": 17,
@@ -15127,7 +15127,7 @@
   {
     "n": 1375,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "01376.jpg",
     "color": 2,
     "bbox_x1": 20,
@@ -20847,7 +20847,7 @@
   {
     "n": 1895,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "01896.jpg",
     "color": 2,
     "bbox_x1": 22,
@@ -21023,7 +21023,7 @@
   {
     "n": 1911,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "01912.jpg",
     "color": 2,
     "bbox_x1": 12,
@@ -22508,7 +22508,7 @@
   {
     "n": 2046,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "02047.jpg",
     "color": 2,
     "bbox_x1": 530,
@@ -25324,7 +25324,7 @@
   {
     "n": 2302,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "02303.jpg",
     "color": 5,
     "bbox_x1": 95,
@@ -28382,7 +28382,7 @@
   {
     "n": 2580,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "02581.jpg",
     "color": 2,
     "bbox_x1": 51,
@@ -29284,7 +29284,7 @@
   {
     "n": 2662,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "02663.jpg",
     "color": 5,
     "bbox_x1": 180,
@@ -33915,7 +33915,7 @@
   {
     "n": 3083,
     "car": 1,
-    "type": "Type R",
+    "type": 4,
     "image_path": "03084.jpg",
     "color": 5,
     "bbox_x1": 10,
