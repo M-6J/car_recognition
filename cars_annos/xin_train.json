@@ -2,7 +2,7 @@
   {
     "n": 0,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "00198.jpg",
     "color": 5,
     "bbox_x1": 91,
@@ -13,7 +13,7 @@
   {
     "n": 1,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "00255.jpg",
     "color": 2,
     "bbox_x1": 29,
@@ -24,7 +24,7 @@
   {
     "n": 2,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "00308.jpg",
     "color": 2,
     "bbox_x1": 16,
@@ -35,7 +35,7 @@
   {
     "n": 3,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "00374.jpg",
     "color": 5,
     "bbox_x1": 9,
@@ -46,7 +46,7 @@
   {
     "n": 4,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "00878.jpg",
     "color": 2,
     "bbox_x1": 101,
@@ -57,7 +57,7 @@
   {
     "n": 5,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "00898.jpg",
     "color": 8,
     "bbox_x1": 89,
@@ -68,7 +68,7 @@
   {
     "n": 6,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "01010.jpg",
     "color": 2,
     "bbox_x1": 6,
@@ -79,7 +79,7 @@
   {
     "n": 7,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "01012.jpg",
     "color": 2,
     "bbox_x1": 58,
@@ -90,7 +90,7 @@
   {
     "n": 8,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "01255.jpg",
     "color": 2,
     "bbox_x1": 17,
@@ -101,7 +101,7 @@
   {
     "n": 9,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "01617.jpg",
     "color": 5,
     "bbox_x1": 62,
@@ -112,7 +112,7 @@
   {
     "n": 10,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "01864.jpg",
     "color": 5,
     "bbox_x1": 64,
@@ -123,7 +123,7 @@
   {
     "n": 11,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "01911.jpg",
     "color": 2,
     "bbox_x1": 91,
@@ -134,7 +134,7 @@
   {
     "n": 12,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "02095.jpg",
     "color": 2,
     "bbox_x1": 90,
@@ -145,7 +145,7 @@
   {
     "n": 13,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "02605.jpg",
     "color": 6,
     "bbox_x1": 10,
@@ -156,7 +156,7 @@
   {
     "n": 14,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "02738.jpg",
     "color": 2,
     "bbox_x1": 86,
@@ -167,7 +167,7 @@
   {
     "n": 15,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "02911.jpg",
     "color": 5,
     "bbox_x1": 64,
@@ -178,7 +178,7 @@
   {
     "n": 16,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "02919.jpg",
     "color": 6,
     "bbox_x1": 42,
@@ -189,7 +189,7 @@
   {
     "n": 17,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "03265.jpg",
     "color": 2,
     "bbox_x1": 33,
@@ -200,7 +200,7 @@
   {
     "n": 18,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "03608.jpg",
     "color": 2,
     "bbox_x1": 180,
@@ -211,7 +211,7 @@
   {
     "n": 19,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "03670.jpg",
     "color": 2,
     "bbox_x1": 146,
@@ -222,7 +222,7 @@
   {
     "n": 20,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "03715.jpg",
     "color": 2,
     "bbox_x1": 1,
@@ -233,7 +233,7 @@
   {
     "n": 21,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "03761.jpg",
     "color": 2,
     "bbox_x1": 114,
@@ -244,7 +244,7 @@
   {
     "n": 22,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "03813.jpg",
     "color": 2,
     "bbox_x1": 35,
@@ -255,7 +255,7 @@
   {
     "n": 23,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "03877.jpg",
     "color": 2,
     "bbox_x1": 97,
@@ -266,7 +266,7 @@
   {
     "n": 24,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "03968.jpg",
     "color": 2,
     "bbox_x1": 228,
@@ -277,7 +277,7 @@
   {
     "n": 25,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "04224.jpg",
     "color": 5,
     "bbox_x1": 17,
@@ -288,7 +288,7 @@
   {
     "n": 26,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "04691.jpg",
     "color": 4,
     "bbox_x1": 38,
@@ -299,7 +299,7 @@
   {
     "n": 27,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "04833.jpg",
     "color": 5,
     "bbox_x1": 36,
@@ -310,7 +310,7 @@
   {
     "n": 28,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "05042.jpg",
     "color": 5,
     "bbox_x1": 147,
@@ -321,7 +321,7 @@
   {
     "n": 29,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "05671.jpg",
     "color": 2,
     "bbox_x1": 229,
@@ -332,7 +332,7 @@
   {
     "n": 30,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "05916.jpg",
     "color": 2,
     "bbox_x1": 146,
@@ -343,7 +343,7 @@
   {
     "n": 31,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "06179.jpg",
     "color": 2,
     "bbox_x1": 131,
@@ -354,7 +354,7 @@
   {
     "n": 32,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "06196.jpg",
     "color": 2,
     "bbox_x1": 6,
@@ -365,7 +365,7 @@
   {
     "n": 33,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "06244.jpg",
     "color": 2,
     "bbox_x1": 118,
@@ -376,7 +376,7 @@
   {
     "n": 34,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "06538.jpg",
     "color": 6,
     "bbox_x1": 19,
@@ -387,7 +387,7 @@
   {
     "n": 35,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "06660.jpg",
     "color": 2,
     "bbox_x1": 46,
@@ -398,7 +398,7 @@
   {
     "n": 36,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "06718.jpg",
     "color": 2,
     "bbox_x1": 97,
@@ -409,7 +409,7 @@
   {
     "n": 37,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "07171.jpg",
     "color": 2,
     "bbox_x1": 282,
@@ -420,7 +420,7 @@
   {
     "n": 38,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "07174.jpg",
     "color": 2,
     "bbox_x1": 63,
@@ -431,7 +431,7 @@
   {
     "n": 39,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "07483.jpg",
     "color": 2,
     "bbox_x1": 43,
@@ -442,7 +442,7 @@
   {
     "n": 40,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "07666.jpg",
     "color": 6,
     "bbox_x1": 89,
@@ -453,7 +453,7 @@
   {
     "n": 41,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "07696.jpg",
     "color": 2,
     "bbox_x1": 42,
@@ -464,7 +464,7 @@
   {
     "n": 42,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "07800.jpg",
     "color": 6,
     "bbox_x1": 30,
@@ -475,7 +475,7 @@
   {
     "n": 43,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "07860.jpg",
     "color": 5,
     "bbox_x1": 58,
@@ -486,7 +486,7 @@
   {
     "n": 44,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "08018.jpg",
     "color": 2,
     "bbox_x1": 181,
@@ -90983,7 +90983,7 @@
   {
     "n": 8271,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "08272.jpg",
     "color": 5,
     "bbox_x1": 122,
@@ -91005,7 +91005,7 @@
   {
     "n": 8273,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "08274.jpg",
     "color": 2,
     "bbox_x1": 27,
@@ -93821,7 +93821,7 @@
   {
     "n": 8529,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "08530.jpg",
     "color": 8,
     "bbox_x1": 86,
@@ -95790,7 +95790,7 @@
   {
     "n": 8708,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "08709.jpg",
     "color": 5,
     "bbox_x1": 15,
@@ -97396,7 +97396,7 @@
   {
     "n": 8854,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "08855.jpg",
     "color": 5,
     "bbox_x1": 126,
@@ -100597,7 +100597,7 @@
   {
     "n": 9145,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "09146.jpg",
     "color": 2,
     "bbox_x1": 54,
@@ -100960,7 +100960,7 @@
   {
     "n": 9178,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "09179.jpg",
     "color": 2,
     "bbox_x1": 25,
@@ -102511,7 +102511,7 @@
   {
     "n": 9319,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "09320.jpg",
     "color": 2,
     "bbox_x1": 289,
@@ -104161,7 +104161,7 @@
   {
     "n": 9469,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "09470.jpg",
     "color": 5,
     "bbox_x1": 40,
@@ -110079,7 +110079,7 @@
   {
     "n": 10007,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "10008.jpg",
     "color": 5,
     "bbox_x1": 78,
@@ -111696,7 +111696,7 @@
   {
     "n": 10154,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "10155.jpg",
     "color": 2,
     "bbox_x1": 30,
@@ -113577,7 +113577,7 @@
   {
     "n": 10325,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "10326.jpg",
     "color": 2,
     "bbox_x1": 26,
@@ -116250,7 +116250,7 @@
   {
     "n": 10568,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "10569.jpg",
     "color": 8,
     "bbox_x1": 37,
@@ -116338,7 +116338,7 @@
   {
     "n": 10576,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "10577.jpg",
     "color": 0,
     "bbox_x1": 15,
@@ -116613,7 +116613,7 @@
   {
     "n": 10601,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "10602.jpg",
     "color": 5,
     "bbox_x1": 21,
@@ -118120,7 +118120,7 @@
   {
     "n": 10738,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "10739.jpg",
     "color": 5,
     "bbox_x1": 55,
@@ -119737,7 +119737,7 @@
   {
     "n": 10885,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "10886.jpg",
     "color": 2,
     "bbox_x1": 73,
@@ -120353,7 +120353,7 @@
   {
     "n": 10941,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "10942.jpg",
     "color": 2,
     "bbox_x1": 123,
@@ -123191,7 +123191,7 @@
   {
     "n": 11199,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "11200.jpg",
     "color": 2,
     "bbox_x1": 99,
@@ -127701,7 +127701,7 @@
   {
     "n": 11609,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "11610.jpg",
     "color": 8,
     "bbox_x1": 44,
@@ -130803,7 +130803,7 @@
   {
     "n": 11891,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "11892.jpg",
     "color": 4,
     "bbox_x1": 24,
@@ -132695,7 +132695,7 @@
   {
     "n": 12063,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "12064.jpg",
     "color": 5,
     "bbox_x1": 22,
@@ -138756,7 +138756,7 @@
   {
     "n": 12614,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "12615.jpg",
     "color": 2,
     "bbox_x1": 46,
@@ -138866,7 +138866,7 @@
   {
     "n": 12624,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "12625.jpg",
     "color": 2,
     "bbox_x1": 22,
@@ -141726,7 +141726,7 @@
   {
     "n": 12884,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "12885.jpg",
     "color": 2,
     "bbox_x1": 5,
@@ -142320,7 +142320,7 @@
   {
     "n": 12938,
     "car": 1,
-    "type": "4",
+    "type": 4,
     "image_path": "12939.jpg",
     "color": 2,
     "bbox_x1": 90,
