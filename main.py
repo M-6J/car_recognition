@@ -16,7 +16,7 @@ from cars_attributes.test_img import Car_recog
 from yolov5.demo import Yolov5Detect, draw_box_string
 
 
-color_name = ['blue', 'green', 'purple', 'yellow', 'orange', 'pink', 'red', 'white', 'black', 'brown', 'grey', 'silver', 'gold', 'tan', 'beige']
+color_name = ['blue', 'green', 'yellow', 'orange', 'red', 'white', 'black', 'brown', 'grey', 'other']
 car_name = [
 "AM_General",
 "Acura",
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
     img_path = "./dataset/test_imgs/1.jpg"  # 测试图片路径
     pred, img0 = detector.post_process(img_path)
-    pred = [i for i in pred if i[-1]==2.0]  # 2.0是汽车的标签
+    pred = [i for i in pred if i[-1]==0]  # 2.0是汽车的标签
     for obj in pred:
         x1, y1, x2, y2, conf, label = obj
         box = [int(x1), int(y1), int(x2-x1), int(y2-y1)] 

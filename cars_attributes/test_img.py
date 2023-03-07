@@ -54,7 +54,7 @@ class Car_recog(object):
 
 
 if __name__ == "__main__":
-    color_name = ['blue', 'green', 'purple', 'yellow', 'orange', 'pink', 'red', 'white', 'black', 'brown', 'grey', 'silver', 'gold', 'tan', 'beige']
+    color_name = ['blue', 'green', 'yellow', 'orange', 'red', 'white', 'black', 'brown', 'grey', 'other']
     car_name = [
     "AM_General",
     "Acura",
