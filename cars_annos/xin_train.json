@@ -12346,7 +12346,7 @@
     "car": 5,
     "type": 4,
     "image_path": "01008.jpg",
-    "color": "CCC",
+    "color": 9,
     "bbox_x1": 45,
     "bbox_y1": 203,
     "bbox_x2": 982,

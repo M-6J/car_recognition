@@ -7,7 +7,7 @@ from yolov5.models.experimental import attempt_load
 from yolov5.utils.general import letterbox, non_max_suppression, scale_boxes
 
 
-class Yolov5Detect(object):
+class Yolov5Detect(object): #iou : Non-maximum suppression (NMS) 중복 제거 임계값 (default=0.5)
     def __init__(self, weights='./weights/yolov5s.pt', device=0, img_size=(352,352), conf=0.5, iou=0.5):
         with torch.no_grad():
             self.device = "cuda:%s" % device
@@ -42,9 +42,11 @@ class Yolov5Detect(object):
 
 
     def post_process(self, img_path):
+        #
         pred, img, img0 = self.predict(img_path)
 
         # Apply NMS
+        #NMS(non-maximum suppression) 알고리즘을 사용하여 겹치는 박스 중 가장 가능성이 높은 박스를 선택합니다.
         pred = non_max_suppression(pred, self.conf, self.iou, classes=None, agnostic=False)
         pred, im0 = pred[0], img0
         if pred is not None and len(pred):
@@ -61,7 +63,7 @@ def draw_box_string(img, box, string):
     img = Image.fromarray(img)
     draw = ImageDraw.Draw(img)
     #font = ImageFont.truetype("simhei.ttf", 24, encoding="utf-8")
-    font = ImageFont.load_default()
+    font = ImageFont.truetype("Arial.ttf", 12)
     draw.text((x+w, y), string, (0, 255, 0), font=font)
     img = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
     return img
