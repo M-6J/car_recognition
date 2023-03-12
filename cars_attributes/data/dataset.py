@@ -10,7 +10,7 @@ import random
 import json
 from PIL import Image
 sys.path.insert(0, "data/")
-from data.data_augment import gussian_blur, gamma_trans, random_crop
+from cars_attributes.data.data_augment import gussian_blur, gamma_trans, random_crop
 
 class Dataset(data.Dataset):
     def __init__(self, img_list, phase='train'):

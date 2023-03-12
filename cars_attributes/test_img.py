@@ -42,7 +42,7 @@ class Car_recog(object):
             self.net.eval()
             img_input = img.to(self.device)
             outputs_color, outputs_type, outputs_sub_type = self.net(img_input)
-            outputs_color = torch.softmax(outputs_color, 1)
+            outputs_color = torch.softmax(outputs_color, 1) 
             outputs_type = torch.softmax(outputs_type, 1)
             outputs_sub_type = torch.softmax(outputs_sub_type, 1)
 
