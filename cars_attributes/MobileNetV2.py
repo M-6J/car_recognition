@@ -102,7 +102,7 @@ class MobileNetV2(nn.Module):
         self.features = nn.Sequential(*self.features)
 
         # building classifier
-        self.classifier_color = nn.Linear(self.last_channel, 15)
+        self.classifier_color = nn.Linear(self.last_channel, 10)
         self.classifier_car = nn.Linear(self.last_channel, 47)
         self.classifier_type = nn.Linear(self.last_channel, 9)
         #self.Logsoftmax = nn.LogSoftmax()
